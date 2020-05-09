@@ -17,15 +17,9 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Docker image
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+# Image repo
+https://hub.docker.com/repository/docker/leonpereiratech/fullcycle2-challenge02
 ```

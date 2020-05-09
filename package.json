@@ -1,8 +1,8 @@
 {
-  "name": "hello-world",
+  "name": "fullcycle2-challenge02",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Maratona Fullcycle - Desafio 02",
+  "author": "Leonardo Pereira <leonpereiratech@gmail.com>",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
