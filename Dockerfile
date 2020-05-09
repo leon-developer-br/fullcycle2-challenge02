@@ -1,12 +1,12 @@
-FROM node:14.1-alpine
+FROM node:13.14.0
 
 WORKDIR /app
 
 COPY .env .
 
-COPY package*.json .
+COPY package*.json ./
 
-COPY database.sqlite .
+COPY database.sqlite ./
 
 COPY dist ./dist
 
@@ -14,4 +14,4 @@ RUN npm install
 
 EXPOSE 3000
 
-CMD ["node", "start:prod"]
+CMD ["npm", "run", "start:prod"]
