@@ -17,4 +17,9 @@ export class MaratonaService {
   save(request: Request): Promise<Maratona> {
     return this.maratonaRepository.save(request.body as any);
   }
+
+  delete(id: string): void {
+    console.log(id);
+    this.maratonaRepository.delete(id);
+  }
 }

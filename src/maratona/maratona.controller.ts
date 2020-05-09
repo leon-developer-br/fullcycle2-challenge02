@@ -1,4 +1,13 @@
-import { Controller, Get, Post, Req, Request } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Req,
+  Request,
+  Param,
+  Delete,
+  HttpCode,
+} from '@nestjs/common';
 import { MaratonaService } from './maratona.service';
 import { Maratona } from './maratona.entity';
 
@@ -14,5 +23,11 @@ export class MaratonaController {
   @Post()
   async store(@Req() request: Request): Promise<any> {
     return await this.maratonaService.save(request);
+  }
+
+  @Delete(':id')
+  @HttpCode(204)
+  async delete(@Param() params): Promise<any> {
+    return await this.maratonaService.delete(params.id);
   }
 }

@@ -7,9 +7,16 @@ import { Maratona } from './maratona/maratona.entity';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: 'env',
+      envFilePath: '.env',
     }),
-    TypeOrmModule.forRoot({}),
+    TypeOrmModule.forRoot({
+      // @ts-ignore
+      type: process.env.TYPEORM_TYPE,
+      database: process.env.TYPEORM_DATABASE,
+      entities: [process.env.TYPEORM_ENTITIES],
+      migrations: [process.env.TYPEORM_MIGRATIONS],
+      synchronize: true,
+    }),
     MaratonaModule,
   ],
 })
